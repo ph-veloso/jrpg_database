@@ -9,6 +9,12 @@ use Illuminate\Support\Facades\Http;
 class GameController extends Controller
 {   
 
+    public function index()
+    {
+        $games = Game::all();
+        return view('games', compact('games'));
+    }
+
     public function store()
     {
         set_time_limit(300);
