@@ -11,7 +11,7 @@ class GameController extends Controller
 
     public function index()
     {
-        $games = Game::all();
+        $games = Game::paginate();
         return view('games', compact('games'));
     }
 
